@@ -21,7 +21,7 @@
               float: left;
               width: 50%;
               padding: 10px;
-              height: 1600px; /* Should be removed. Only for demonstration */
+              height: 1100px; /* Should be removed. Only for demonstration */
               margin: 0;
               color: rgb(250, 244, 244);
             }
@@ -40,6 +40,7 @@
             /* Clear floats after the columns */
             
             </style>
+            
     </head>
     <body>
         <div class="heading" style="background-color: rgb(235, 220, 12);">
@@ -84,8 +85,9 @@
                     </tr>
               </table>
               <br><br><br>
-              <img src="data:image/png;base64,{{ results }}" width="500">
+              <div><embed src={{ piech|safe }} /></div>
             </div>
+            
             <div class="column">
                 <h2><center>Quantity of material required for {{msg[0]}} ft<sup>2</sup></center></h2>
                 <br><br>
@@ -123,7 +125,10 @@
                           <td><b>{{msg[15]}} Ft<sup>2</sup></b></td>
                       </tr>
                 </table>
+                <br><br><br><br><br>
+                <div><embed src={{ chart|safe }} /></div>
             </div>
+            
         </div>
     </body>
 </html>
