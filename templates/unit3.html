@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Construction cost estimator</title>
+        <title>Civil Unit Conversion</title>
         <!-- add icon link -->
         <link rel = "icon" href = "https://media.istockphoto.com/vectors/rulers-and-hard-hat-vector-id1148780635?k=6&m=1148780635&s=612x612&w=0&h=ChqbLp-hd0YVdpJLlm6wjnNy-yQejdwh70sB023UpwY="
         type = "image/x-icon">
@@ -32,35 +32,25 @@
     <body>
         <center>
         <div class="heading" style="background-color: rgb(235, 220, 12); align-content: center;">
-            <h1 style="color: rgb(7, 7, 7);">FLOORING CALCULATION (TILE CALCULATION) </h1></center>
+            <h1 style="color: rgb(7, 7, 7);">CIVIL UNIT CONVERSION</h1></center>
         </div>
             <center>
-            <h2 style="color: rgb(252, 248, 248);"> TOTAL AREA OF FLOORING IS {{msg[4]}} m<sup>2</sup></h2>
+            <br><br><br>
             <table align="center" border=2 style="color: rgb(252, 248, 248);">
                 <tr>
-                    <td><b>MATERIAL</b></td>
-                    <td><b>QUANITY</b></td>
+                    <td><b>UNIT</b></td>
+                    <td><b>VALUE</b></td>
                 </tr>
                 <tr>
-                    <td>TILES</td>
-                    <td>{{msg[7]}} nos</td>
+                    <td>{{li[0]}}</td>
+                    <td>{{msg[0]}}</td>
                 </tr>
                 <tr>
-                    <td>CEMENT</td>
-                    <td>{{msg[5]}} bags or {{msg[6]}} kg</td>
+                    <td>{{li[1]}}</td>
+                    <td>{{msg[1]}}</td>
                 </tr>
-                <tr>
-                    <td>SAND</td>
-                    <td>{{msg[8]}} kg or {{msg[9]}} tons</td>
-                </tr>
+               
             </table>
             </center>
-        <center>
-        <div class="column">
-            <center>
-                <embed src={{ piech|safe }} />
-            </center>
-        </div>
-    </center>
     </body>
 </html>

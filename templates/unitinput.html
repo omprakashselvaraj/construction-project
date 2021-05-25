@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Flooring Calculator</title>
+        <title>CIVIL UNIT CONVERSION CALCULATOR</title>
         <link rel = "icon" href = "https://media.istockphoto.com/vectors/rulers-and-hard-hat-vector-id1148780635?k=6&m=1148780635&s=612x612&w=0&h=ChqbLp-hd0YVdpJLlm6wjnNy-yQejdwh70sB023UpwY="
         type = "image/x-icon">
         <style>
@@ -23,6 +23,7 @@
             font-size: medium;
             text-align:center;
             box-sizing: border-box;
+            color: rgb(65, 64, 63);
             }
             div{
                 text-align: center;
@@ -30,7 +31,7 @@
             input[type=submit] {
             width: 40%;
             background-color:rgb(245, 245, 21);
-            color: rgb(2, 2, 2);
+            color: rgb(3, 3, 3);
             font-weight:bold;
             font-size: medium;
             padding: 14px 20px;
@@ -43,20 +44,29 @@
     </head>
     <body>
         <br><br>
-        <h1 style="color:white;"><center>Flooring Calculator(Tiles Calculator)</center></h1>
+        <h1 style="color:white;"><center>CIVIL UNIT CONVERSION CALCULATOR</center></h1>
         <br><br><br><br>
         <div>
             <center>
-            <form name="input" method="POST" action="/floor" onsubmit="return validateForm()">
-                <label for="length" style="color:white; font-size: medium;"><b>ENTER FLOOR LENGTH </b> </label><br>
-                <input id = "length" type="number" name="length" placeholder="Enter floor length(in ft)" pattern="[-+]?[0-9]*[.,]?[0-9]+" required><br><br>
-                <label for="width" style="color:white; font-size: medium;"><b>ENTER FLOOR WIDTH </b> </label><br>
-                <input id = "width" type="number" name="width" placeholder="Enter floor width(in ft)" pattern="[-+]?[0-9]*[.,]?[0-9]+" required><br><br>
-                <label for="tlength" style="color:white; font-size: medium;"><b>ENTER TILE LENGTH </b> </label><br>
-                <input id = "tlength" type="number" name="tlength" placeholder="Enter Tile length(in ft)" pattern="[-+]?[0-9]*[.,]?[0-9]+" required><br><br>
-                <label for="twidth" style="color:white; font-size: medium;"><b>ENTER TILE WIDTH</b> </label><br>
-                <input id = "twidth" type="number" name="twidth" placeholder="Enter tile width(in ft)" pattern="[-+]?[0-9]*[.,]?[0-9]+" required><br><br>
-                <input type="submit" value="CALCULATE">
+            <form name="input" method="POST" action="/unit">
+                <br>
+                <label for="type" style="color: white;"><b>CHOOSE CONVERSION TYPE </b> </label>
+                <br>
+                <select name="type">
+                    
+                    <option value=1>Length</option>
+                    <option value=2>Area</option>
+                    <option value=3>Volume</option>
+                </select>
+                <br>
+                
+
+                <label for="value" style="color:white; font-size: medium;"><b>ENTER VALUE (in m/m<sup>2</sup>/m<sup>3</sup>) </b> </label><br>
+                <input id = "value" type="number" name="value" placeholder="Enter value" pattern="[-+]?[0-9]*[.,]?[0-9]+" required><br><br>
+                <label for="round" style="color:white; font-size: medium;"><b>ENTER DECIMAL PRECISION </b> </label><br>
+                <input id = "round" type="number" name="round" placeholder="Enter decimal precision(example 1,2,3,..)" pattern="[-+]?[0-9]*[.,]?[0-9]+" required><br><br>
+                
+               <input type="submit" value="CALCULATE">
             </form>
             </center>
         </div>
