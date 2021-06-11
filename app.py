@@ -197,7 +197,7 @@ def concrete():
 
     pie_chart = pygal.Pie(height=300)
     pie_chart.title = 'Approx. cost on various work of materials'
-    results=[(msg[1],'Cement'),(msg[2],'Sand'),(msg[4],'Aggregate')]
+    results=[(msg[2],'Cement'),(msg[3],'Sand'),(msg[5],'Aggregate')]
     for r in results:
         pie_chart.add(r[1], r[0])
     pie_chart.value_formatter = lambda x: "%.15f" % x
